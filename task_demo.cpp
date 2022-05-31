@@ -11,7 +11,7 @@ class Organization
    
  		void getInfo()									
 		{
-        	cout<<"Enter the company name : ";
+        		cout<<"Enter the company name : ";
 			cin.getline(c_name,20);
 			cout<<"Enter location of comapany : ";
 			cin.getline(c_addr,25);
@@ -104,7 +104,6 @@ class Employee:public Person,public Organization						//Multiple Inheritance
 
 		void salary()
 		{
-		    //cout<<"\ne-id : "<<var;
 			if(var >=1 && var <= 250)
 			{
 		    	cout<<"\nSalary is : "<<salary1;
@@ -162,7 +161,7 @@ class Intern:public Student									//Multilevel Inheritance
 		}
 };
 
-class Salary_Inhand :public Employee
+class Salary_Inhand :public Employee							//Hierarchiecal Inheritance
 {
 	public :
 		int salary1=50000,salary2=40000,Salary=0,inHand=0;
