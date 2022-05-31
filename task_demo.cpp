@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+static int var;
 
 class Organization
 {
@@ -10,7 +11,7 @@ class Organization
    
  		void getInfo()									
 		{
-        		cout<<"Enter the company name : ";
+        	cout<<"Enter the company name : ";
 			cin.getline(c_name,20);
 			cout<<"Enter location of comapany : ";
 			cin.getline(c_addr,25);
@@ -74,16 +75,18 @@ class Employee:public Person,public Organization						//Multiple Inheritance
 			cin.getline(e_mail,50);	
 			cout<<"Enter employee id : ";
 			cin>>e_id;
+			var=e_id;
 		}
 			
-		void domain(int x)					//function overloading by diffrent parameter
+		void domain(int var)					//function overloading by diffrent parameter
 		{
-			x=e_id;
-			if(x>=1 && x<=250)
+			
+			//cout<<"\ne-id : "<<var;
+			if(var>=1 && var<=250)
 			{
 				cout<<"\nDomain - Digital\n";
 			}
-			else if(x>=251 && x<=500)
+			else if(var>=251 && var<=500)
 			{
 				cout<<"\nDomain - Embedded\n";
 			}
@@ -101,15 +104,16 @@ class Employee:public Person,public Organization						//Multiple Inheritance
 
 		void salary()
 		{
-			if(e_id >=1 && e_id <= 250)
+		    //cout<<"\ne-id : "<<var;
+			if(var >=1 && var <= 250)
 			{
-		    		cout<<"\nSalary is : "<<salary1;
-				domain(e_id);
+		    	cout<<"\nSalary is : "<<salary1;
+				domain(var);
 			}
-			else if(e_id >= 251 && e_id <= 500)
+			else if(var >= 251 && var <= 500)
 			{
 				cout<<"\nSalary is : "<<salary2;
-				domain(e_id);
+				domain(var);
 			}
 			else
 			{
@@ -161,7 +165,7 @@ class Intern:public Student									//Multilevel Inheritance
 class Salary_Inhand :public Employee
 {
 	public :
-		int e_id,salary1=50000,salary2=40000,Salary=0,inHand=0;
+		int salary1=50000,salary2=40000,Salary=0,inHand=0;
 		float pf1=0,pf2=0,Pf=0;
 		Salary_Inhand(int x)						   //Parameterised Constructor
 		{
@@ -177,13 +181,13 @@ class Salary_Inhand :public Employee
 
 		void pf()
 		{
-			if(Employee::e_id >=1 && Employee::e_id <= 250)
+			if(var >=1 && var <= 250)
 			{
-		    		pf1 = (salary1/100)*12;
+		    	pf1 = (salary1/100)*12;
 				Pf =pf1;
 				Salary =salary1;
 			}
-			else if(Employee::e_id >= 251 && Employee::e_id <= 500)
+			else if(var >= 251 && var <= 500)
 			{
 				pf2 = (salary2/100)*12;
 				Pf =pf2;
@@ -221,9 +225,9 @@ int main()
 	{
 		Employee e1;
 		e1.domain();
-            	cout<<endl<<endl<<"***************************************Employee Information***************************************"<<endl;
-            	e1.display();
-            	e1.salary();
+        cout<<endl<<endl<<"***************************************Employee Information***************************************"<<endl;
+        e1.display();
+        e1.salary();
 		Salary_Inhand i1(i1.Salary),i2(i2.Pf);
 		Salary_Inhand i3 = i1 - i2;
 		i3.print();	
