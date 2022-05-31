@@ -80,8 +80,6 @@ class Employee:public Person,public Organization						//Multiple Inheritance
 			
 		void domain(int var)					//function overloading by diffrent parameter
 		{
-			
-			//cout<<"\ne-id : "<<var;
 			if(var>=1 && var<=250)
 			{
 				cout<<"\nDomain - Digital\n";
@@ -140,8 +138,8 @@ class Intern:public Student									//Multilevel Inheritance
 				cin>>marks[i];
 				if(marks[i]>100)
 				{
+					i--;
 					cout<<"\nEnter correct marks!!\n";
-					break;
 				}
 				else
 				{
