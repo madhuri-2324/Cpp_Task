@@ -1,8 +1,6 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-//#include "Person.h"
-//#include "Organization.h"
-//#include<string.h>
+
 using namespace std;
 
 class Employee:protected Person,protected Organization						//Multiple Inheritance
