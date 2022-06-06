@@ -3,14 +3,14 @@
 #include<string.h>
 using namespace std;
 
-class Organization
+class Organization											//class Defination
 {
-	protected:
-		char c_name[20];
+	protected:											//access within class and it's child class
+		char c_name[20];									//variables
 		char c_addr[25];
 		int distance;
    
- 		void getInfo();								
+ 		void getInfo();										// function declaration						
 	
 		void display();
 };
