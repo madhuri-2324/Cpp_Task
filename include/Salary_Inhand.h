@@ -1,12 +1,10 @@
 #ifndef SALARY_INHAND_H
 #define SALARY_INHAND_H
 #include<string.h>
-//#include "Person.h"
-//#include "Organization.h"
-//#include "Employee.h"
+
 using namespace std;
 extern int var;
-//static int var;
+
 class Salary_Inhand :public Employee
 {
 	public :
