@@ -5,8 +5,9 @@
 #include "class2.h"
 #include "class4.h"
 using namespace std;
+
 extern int var;
-//static int var;
+
 class Salary_Inhand :public Employee
 {
 	public :
