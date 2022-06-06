@@ -1,8 +1,7 @@
 #ifndef INTERN_H
 #define INTERN_H
 #include<string.h>
-//#include "Person.h"
-//#include "Studet.h"
+
 using namespace std;
 
 class Intern:protected Student									//Multilevel Inheritance
